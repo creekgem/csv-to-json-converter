@@ -16,9 +16,9 @@ const fileReader = (file)=>{
         
         toDataArray.forEach((dataRow, i)=>{
             dataRow = dataRow.replace('\r', '');
-            if(i != 0)
+            if(i != 0 && dataRow != '')
                 toDataItems.push(dataRow.split(','));
-            else
+            else if(i == 0)
                 dataTitles = dataRow.split(',');
         });
         
